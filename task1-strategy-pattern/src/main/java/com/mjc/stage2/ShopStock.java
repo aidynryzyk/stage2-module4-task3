@@ -14,9 +14,8 @@ public class ShopStock {
         List<Product> filteredProducts = new ArrayList<>();
         for (Product product:
              productList) {
-            if (filteringStrategy.filter(product)) {
-                filteredProducts.add(product);
-            }
+            filteringStrategy.filter(product);
+            filteredProducts.add(product);
         }
         return filteredProducts;
     }

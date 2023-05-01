@@ -21,7 +21,7 @@ public class LexemeParser extends AbstractTextParser {
         String[] parts = string.split(LEXEME_REGEX);
         for (String part:
              parts) {
-            AbstractTextComponent inner = new TextComponent(TextComponentType.WORD);
+            AbstractTextComponent inner = new TextComponent(TextComponentType.SENTENCE);
             nextParser.parse(abstractTextComponent, part);
             abstractTextComponent.add(inner);
         }
